@@ -5,50 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ar Prime Londrina</title>
   <link rel="stylesheet" href="style.css" />
-  <style>
-    nav {
-      display: flex;
-      justify-content: center;
-      gap: 1rem;
-      background-color: #f0f0f0;
-      padding: 1rem;
-    }
-    nav a {
-      text-decoration: none;
-      color: #333;
-      font-weight: bold;
-    }
-    section {
-      display: none;
-      padding: 2rem;
-    }
-    section.active {
-      display: block;
-    }
-    .before-after img {
-      width: 45%;
-      margin: 5px;
-      border-radius: 10px;
-    }
-    .before-after .item {
-      margin-bottom: 20px;
-    }
-    .logo {
-      width: 200px;
-    }
-    header {
-      text-align: center;
-      padding: 2rem;
-    }
-  </style>
-  <script>
-    function showTab(id) {
-      const sections = document.querySelectorAll('main section');
-      sections.forEach(section => section.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
-    window.addEventListener('DOMContentLoaded', () => showTab('quem-somos'));
-  </script>
 </head>
 <body>
   <header>
@@ -90,4 +46,32 @@
       <h2>Depoimentos de Clientes</h2>
       <blockquote>
         "Profissionais pontuais e caprichosos. Serviço impecável!"
-        <cite>–
+        <cite>– João Silva</cite>
+      </blockquote>
+      <blockquote>
+        "Atendimento de qualidade e muito eficiente, recomendo!"
+        <cite>– Maria Oliveira</cite>
+      </blockquote>
+    </section>
+
+    <section id="contato">
+      <h2>Contato</h2>
+      <p>Entre em contato conosco para agendar seu serviço de instalação, manutenção ou limpeza de ar-condicionado.</p>
+      <a href="mailto:arprimelondrina@gmail.com">arprimelondrina@gmail.com</a>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 AR PRIME LONDRINA - Todos os direitos reservados</p>
+  </footer>
+
+  <script>
+    function showTab(id) {
+      const sections = document.querySelectorAll('main section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+    window.addEventListener('DOMContentLoaded', () => showTab('quem-somos'));
+  </script>
+</body>
+</html>
