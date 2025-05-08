@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -6,45 +5,89 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Ar Prime Londrina</title>
   <link rel="stylesheet" href="style.css" />
+  <style>
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      background-color: #f0f0f0;
+      padding: 1rem;
+    }
+    nav a {
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+    }
+    section {
+      display: none;
+      padding: 2rem;
+    }
+    section.active {
+      display: block;
+    }
+    .before-after img {
+      width: 45%;
+      margin: 5px;
+      border-radius: 10px;
+    }
+    .before-after .item {
+      margin-bottom: 20px;
+    }
+    .logo {
+      width: 200px;
+    }
+    header {
+      text-align: center;
+      padding: 2rem;
+    }
+  </style>
+  <script>
+    function showTab(id) {
+      const sections = document.querySelectorAll('main section');
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+    }
+    window.addEventListener('DOMContentLoaded', () => showTab('quem-somos'));
+  </script>
 </head>
 <body>
   <header>
-    <img src="assets/imagens/logo.png" alt="Logo">
+    <img src="assets/imagens/logo.png" alt="Logo da Ar Prime" class="logo">
     <h1>Ar Prime Londrina</h1>
     <a href="https://wa.me/5543991684618" class="whatsapp">Fale conosco pelo WhatsApp</a>
   </header>
 
+  <nav>
+    <a href="#" onclick="showTab('quem-somos')">Quem Somos</a>
+    <a href="#" onclick="showTab('servicos')">Antes e Depois</a>
+    <a href="#" onclick="showTab('depoimentos')">Depoimentos</a>
+    <a href="#" onclick="showTab('contato')">Contato</a>
+  </nav>
+
   <main>
-    <section>
+    <section id="quem-somos" class="active">
       <h2>Quem Somos</h2>
-      <p>Somos especialistas em instalação, manutenção e higienização de ar-condicionado em Londrina e região. Qualidade, segurança e compromisso com você.</p>
+      <p>A Ar Prime Londrina atua com excelência na instalação, manutenção e higienização de ar-condicionado em Londrina e região. Prezamos pela qualidade, segurança e o melhor atendimento aos nossos clientes.</p>
     </section>
 
-    <section>
-      <h2>Serviços Realizados</h2>
-      <div class="gallery">
-        <img src="IMG_20240130_162917.jpg" alt="Instalação em residência" />
-        <img src="IMG_20240130_164926.jpg" alt="Higienização completa" />
-        <img src="IMG_20240201_120427.jpg" alt="Ar-condicionado split novo" />
-        <img src="IMG_20240220_141927.jpg" alt="Manutenção técnica" />
-        <img src="IMG_20240220_141933.jpg" alt="Serviço concluído" />
-        <img src="IMG_20240228_162528.jpg" alt="Limpeza de filtros" />
-        <img src="IMG_20240228_163106.jpg" alt="Inspeção de equipamento" />
-        <img src="IMG_20240306_133324.jpg" alt="Equipe em ação" />
-        <img src="IMG_20240306_134341.jpg" alt="Ambiente climatizado" />
-        <img src="IMG_20240130_122130.jpg" alt="Unidade instalada" />
+    <section id="servicos">
+      <h2>Antes e Depois</h2>
+      <div class="before-after">
+        <div class="item">
+          <img src="assets/imagens/antes1.jpg" alt="Antes da limpeza">
+          <img src="assets/imagens/depois1.jpg" alt="Depois da limpeza">
+          <p>Higienização completa de evaporadora residencial.</p>
+        </div>
+        <div class="item">
+          <img src="assets/imagens/antes2.jpg" alt="Antes da instalação">
+          <img src="assets/imagens/depois2.jpg" alt="Após a instalação">
+          <p>Instalação profissional de ar-condicionado split.</p>
+        </div>
       </div>
     </section>
 
-    <section>
-      <h2>Depoimentos</h2>
-      <blockquote>"Serviço impecável, recomendo muito!" - Cliente do Google</blockquote>
-      <blockquote>"Muito profissionais e cuidadosos." - Avaliação 5 estrelas</blockquote>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 Ar Prime Londrina. Todos os direitos reservados.</p>
-  </footer>
-</body>
-</html>
+    <section id="depoimentos">
+      <h2>Depoimentos de Clientes</h2>
+      <blockquote>
+        "Profissionais pontuais e caprichosos. Serviço impecável!"
+        <cite>–
